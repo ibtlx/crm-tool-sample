@@ -14,10 +14,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-<<<<<<< HEAD
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-=======
->>>>>>> 0b0bfc3 (Updated project files and configurations)
 
 import java.time.LocalDateTime;
 
@@ -37,10 +34,6 @@ class CrmtoolApplicationTests {
 
     @Test
     void testCreateCustomer() throws Exception {
-<<<<<<< HEAD
-=======
-        
->>>>>>> 0b0bfc3 (Updated project files and configurations)
         Customer customer = new Customer();
         customer.setId(1L);
         customer.setName("Ibtihal Ibrahim");
@@ -50,30 +43,16 @@ class CrmtoolApplicationTests {
         customer.setCreatedAt(LocalDateTime.of(2024, 9, 4, 12, 0));
         customer.setStatus("Active");
 
-<<<<<<< HEAD
         when(customerService.createCustomer(any(Customer.class))).thenReturn(customer);
 
-=======
-        
-        when(customerService.createCustomer(any(Customer.class))).thenReturn(customer);
-
-       
->>>>>>> 0b0bfc3 (Updated project files and configurations)
         mockMvc.perform(post("/api/customers")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{ \"name\": \"Ibtihal Ibrahim\", \"email\": \"ibtihal.ibra@example.com\", " +
                         "\"phoneNo\": \"1234567890\", \"address\": \"Muscat\", " +
                         "\"createdAt\": \"2024-09-04T12:00:00\", \"status\": \"Active\" }"))
-<<<<<<< HEAD
                 .andExpect(status().isOk())
                 .andExpect(content().json("{ \"id\": 1, \"name\": \"Ibtihal Ibrahim\", " +
                         "\"email\": \"ibtihal.ibra@example.com\", \"phoneNo\": \"1234567890\", " +
                         "\"address\": \"Muscat\", \"createdAt\": \"2024-09-04T12:00:00\", \"status\": \"Active\" }"));
     }
 }
-
-=======
-                .andExpect(status().isOk());
-    }
-}
->>>>>>> 0b0bfc3 (Updated project files and configurations)
