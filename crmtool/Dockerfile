@@ -17,4 +17,4 @@ ENV PORT=8888
 EXPOSE 8888
 
 # Run the jar file
-CMD ["java", "-jar", "target/crmtool.jar"]
+CMD ["java", "-jar", "target/com.ibtihal.crmtool.jar"]
