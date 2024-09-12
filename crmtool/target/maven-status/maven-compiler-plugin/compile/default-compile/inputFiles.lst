@@ -1,0 +1,6 @@
+/workspace/crm-tool-sample/crmtool/src/main/java/com/ibtihal/crmtool/CrmtoolApplication.java
+/workspace/crm-tool-sample/crmtool/src/main/java/com/ibtihal/crmtool/config/SecurityConfig.java
+/workspace/crm-tool-sample/crmtool/src/main/java/com/ibtihal/crmtool/controller/CustomerController.java
+/workspace/crm-tool-sample/crmtool/src/main/java/com/ibtihal/crmtool/model/Customer.java
+/workspace/crm-tool-sample/crmtool/src/main/java/com/ibtihal/crmtool/repository/CustomerRepository.java
+/workspace/crm-tool-sample/crmtool/src/main/java/com/ibtihal/crmtool/service/CustomerService.java
