@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Compile and package the application using Maven
-RUN ./mvnw package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 # Set the environment variable for port
 ENV PORT=8888
@@ -17,4 +17,4 @@ ENV PORT=8888
 EXPOSE 8888
 
 # Run the jar file
-CMD ["java", "-jar", "target/com.ibtihal.crmtool.jar"]
+CMD ["java", "-jar", "target/crmtool-0.0.1-SNAPSHOT.jar"]
