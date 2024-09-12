@@ -11,10 +11,10 @@ COPY . /app
 RUN ./mvnw package -DskipTests
 
 # Set the environment variable for port
-ENV PORT=3002
+ENV PORT=8888
 
 # Expose the application port
-EXPOSE 3002
+EXPOSE 8888
 
 # Run the jar file
 CMD ["java", "-jar", "target/crmtool.jar"]
