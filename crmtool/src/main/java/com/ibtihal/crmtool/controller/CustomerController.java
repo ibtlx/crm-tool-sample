@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/customers")
 public class CustomerController {
@@ -14,11 +17,16 @@ public class CustomerController {
     private CustomerService customerService;
 
     @PostMapping
-    public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
+    public ResponseEntity<Map<String, Object>> createCustomer(@RequestBody Customer customer) {
         Customer createdCustomer = customerService.createCustomer(customer);
-        return ResponseEntity.ok(createdCustomer);
+        
+        // Create a response object with customer data and a message
+        Map<String, Object> response = new HashMap<>();
+        response.put("message", "Customer created successfully and hosted online!");
+        response.put("customer", createdCustomer);
+        
+        return ResponseEntity.ok(response);
     }
-
 }
 
 
