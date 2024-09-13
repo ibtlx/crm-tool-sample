@@ -2,9 +2,9 @@ FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-COPY . /app
+COPY . .
 
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean package
 
 EXPOSE 8888
 
